@@ -1,13 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import {
   navLinks as links,
   navTargetBlankLinks as targetBlankLinks
 } from './libs/helpers'
+import Loading from './Loading'
+import News from './News'
 
 const Navbar = () => {
   return (
-    <div className='sm:w-1/3 md:1/4 w-full flex-shrink flex-grow-0 p-4'>
+    <div className='sm:w-1/3 md:1/4 w-full flex-shrink flex-grow-0'>
       <div className='sticky top-0 p-4 rounded-xl w-full h-2/4 glass border-solid border-2 border-gray-200'>
         <ul className='flex sm:flex-col overflow-hidden content-center justify-between gap-6'>
           {links?.map((link) => (
@@ -41,6 +44,10 @@ const Navbar = () => {
             </span>
           </h2>
         </div>
+        <Suspense fallback={<Loading />}>
+          {/* @ts-expect-error Server Component */}
+          <News query='arsenal' />
+        </Suspense>
       </div>
     </div>
   )
