@@ -3,7 +3,10 @@ import { delay, getNews } from './libs/api'
 
 const getData = async (query: string) => {
   const res = await fetch(
-    `https://newsapi.org/v2/everything?q=${query}&apiKey=d1c0adf16619482eb5c03d15a7f45b59`
+    `https://newsapi.org/v2/everything?q=${query}&apiKey=d1c0adf16619482eb5c03d15a7f45b59`,
+    {
+      cache: 'reload'
+    }
   )
   const news = await res.json()
   return news

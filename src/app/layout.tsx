@@ -21,7 +21,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='h-screen w-screen bg-gray-200'>
+      <body className='h-screen w-screen candy-mesh'>
         <div className='w-full h-full flex flex-col sm:flex-row flex-grow overflow-hidden'>
           <Navbar />
           <main role='main' className='w-full h-full flex-grow overflow-auto'>

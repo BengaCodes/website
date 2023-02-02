@@ -1,5 +1,11 @@
-const Resume = () => {
-  return <div>Resume</div>
+import Resume from '../../../components/Resume'
+
+const ResumePage = () => {
+  return (
+    <div className=''>
+      <Resume />
+    </div>
+  )
 }
 
-export default Resume
+export default ResumePage
