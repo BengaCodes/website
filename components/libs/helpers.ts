@@ -46,3 +46,20 @@ export const footerLinks = [
 ]
 
 export const navTargetBlankLinks = ['GitHub', 'LinkedIn']
+
+export const greeting = () => {
+  let greeting: string = ''
+
+  const d = new Date()
+  const hour = d.getHours()
+
+  if (hour >= 5 && hour < 12) {
+    greeting = 'Good Morning'
+  } else if (hour >= 12 && hour < 17) {
+    greeting = 'Good Afternoon'
+  } else if (hour >= 17 && hour < 23) {
+    greeting = 'Good Evening'
+  }
+
+  return greeting
+}
