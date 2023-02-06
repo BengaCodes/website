@@ -18,12 +18,12 @@
       at 40% 20%,
       rgb(251, 122, 255) 0px,
       transparent 50%
-    ), radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    ), radial-gradient(at 80% 0%, rgb(33, 56, 60) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgb(115, 12, 20) 0px, transparent 50%),
     radial-gradient(at 80% 50%, rgb(198, 133, 255) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+    radial-gradient(at 0% 100%, rgb(123, 62, 26) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgb(53, 52, 81) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgb(217, 207, 210) 0px, transparent 50%);
 }
 
 .candy-mesh {
@@ -32,42 +32,8 @@
       at 99% 6%,
       hsla(195, 69%, 67%, 1) 0px,
       transparent 50%
-    ), radial-gradient(at 55% 88%, hsla(189, 74%, 69%, 1) 0px, transparent 50%),
-    radial-gradient(at 53% 27%, hsla(271, 78%, 63%, 1) 0px, transparent 50%),
-    radial-gradient(at 89% 89%, hsla(317, 89%, 70%, 1) 0px, transparent 50%),
-    radial-gradient(at 35% 44%, hsla(337, 92%, 61%, 1) 0px, transparent 50%);
+    ), radial-gradient(at 55% 88%, rgb(8, 2, 38) 0px, transparent 50%),
+    radial-gradient(at 53% 27%, rgb(27, 26, 29) 0px, transparent 50%),
+    radial-gradient(at 89% 89%, rgb(18, 6, 14) 0px, transparent 50%),
+    radial-gradient(at 35% 44%, rgb(19, 14, 16) 0px, transparent 50%);
 }
-
-
-.wrapper {
-  animation: scroll 70s linear infinite;
-  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
-  color: #eee;
-  height: 100vh;
-  min-width: 360px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-  
-}
-
-@keyframes scroll {
-  100%{
-    background-position:0px -3000px;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .wrapper {
-    animation: scroll 200s linear infinite;
-  }
-}
-
-/* @media (min-width: 670px) {
-  .title {
-    font-size: 5rem;
-  }
-} */
