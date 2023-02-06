@@ -10,6 +10,11 @@ export const navLinks = [
     img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/user.svg'
   },
   {
+    name: 'Projects',
+    link: '/projects',
+    img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/briefcase.svg'
+  },
+  {
     name: 'Resume',
     link: '/resume',
     img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/newspaper.svg'

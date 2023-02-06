@@ -10,7 +10,7 @@ import News from './News'
 
 const Navbar = () => {
   return (
-    <div className='sm:w-1/3 md:1/4 w-full flex-shrink flex-grow-0'>
+    <div className='sm:w-1/3 md:2/4 w-full flex-shrink flex-grow-0'>
       <div className='sticky top-0 p-4 rounded-xl w-full h-2/4 glass border-solid border-2 border-gray-200'>
         <ul className='flex sm:flex-col overflow-hidden content-center justify-between gap-6'>
           {links?.map((link) => (
@@ -37,17 +37,17 @@ const Navbar = () => {
         </ul>
       </div>
       <div className='bg-gray-50 h-2/4 rounded-xl border my-3 w-full'>
-        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-6 lg:px-8 lg:flex lg:items-center lg:justify-between'>
+        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-6 lg:px-8 lg:flex lg:flex-col md:flex md:flex-col lg:items-center lg:justify-between'>
           <h2 className='text-xl font-extrabold tracking-tight text-gray-900 sm:text-xl'>
             <span className='block text-red-600 overflow-ellipsis'>
               Latest Arsenal News
             </span>
           </h2>
+          <Suspense fallback={<Loading />}>
+            {/* @ts-expect-error Server Component */}
+            <News query='arsenal football club' />
+          </Suspense>
         </div>
-        <Suspense fallback={<Loading />}>
-          {/* @ts-expect-error Server Component */}
-          <News query='arsenal' />
-        </Suspense>
       </div>
     </div>
   )
