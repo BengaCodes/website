@@ -36,9 +36,9 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className='bg-gray-50 h-2/4 rounded-xl border my-3 w-full'>
+      <div className='h-2/4 rounded-xl border glass my-3 w-full'>
         <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-6 lg:px-8 lg:flex lg:flex-col md:flex md:flex-col lg:items-center lg:justify-between'>
-          <h2 className='text-xl font-extrabold tracking-tight text-gray-900 sm:text-xl'>
+          <h2 className='text-xl font-extrabold tracking-tight text-gray-900 sm:text-xl pb-2'>
             <span className='block text-red-600 overflow-ellipsis'>
               Latest Arsenal News
             </span>
@@ -46,6 +46,17 @@ const Navbar = () => {
           <Suspense fallback={<Loading />}>
             {/* @ts-expect-error Server Component */}
             <News query='arsenal football club' />
+          </Suspense>
+        </div>
+        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-6 lg:px-8 lg:flex lg:flex-col md:flex md:flex-col lg:items-center lg:justify-between'>
+          <h2 className='text-xl font-extrabold tracking-tight text-gray-900 sm:text-xl pb-2 '>
+            <span className='block text-red-600 overflow-ellipsis'>
+              Latest London News
+            </span>
+          </h2>
+          <Suspense fallback={<Loading />}>
+            {/* @ts-expect-error Server Component */}
+            <News query='London' />
           </Suspense>
         </div>
       </div>
