@@ -22,7 +22,7 @@ const News = async ({ query }: { query: string }) => {
       <Link
         href={news?.articles[0]?.url}
         target='_blank'
-        className='hover:text-blue-400 hover:border-b-2 hover:border-cyan-400'
+        className='hover:text-white hover:border-b-2 hover:border-red-400'
       >
         {news?.articles[0]?.title}
       </Link>

@@ -3,7 +3,7 @@ import { footerLinks } from './libs/helpers'
 
 const Footer = () => {
   return (
-    <footer className=' bg-gray-500 bg-transparent mt-auto'>
+    <footer className=' bg-gray-300 bg-transparent mt-auto'>
       <div className='px-4 py-6 text-white mx-auto'>
         <div className='flex justify-around'>
           {footerLinks?.map((link) => (
