@@ -11,7 +11,7 @@ const Hero = () => {
             {greeting()} & Welcome
           </h1>
           <h3 className='text-xl py-2 font-bold leading-none sm:text-3xl xl:max-w-3xl dark:text-gray-900'>
-            Im Benga Olasebikan
+            I&apos;m Benga Olasebikan
           </h3>
           <p className='mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-900'>
             A Software Engineer based in London, UK
@@ -38,8 +38,11 @@ const Hero = () => {
           alt='Laptop'
           width={200}
           height={300}
-          className='w-5/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500'
+          className='w-5/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500 bg-gradient-to-top bg-slate-400'
           priority
+          style={{
+            backgroundImage: 'linear-gradient(0, 0, 0, 0.5)'
+          }}
         />
       </div>
     </section>
