@@ -1,30 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import img from '../assets/beng.jpeg'
-import Skills from './Skills'
-
-const skills: string[] = [
-  'HTML/CSS',
-  'JavaScript',
-  'TypeScript',
-  'NodeJS',
-  'React & (Next JS)',
-  'Responsive design',
-  'Cross-browser compatibility',
-  'Sass',
-  'Git',
-  'RESTful APIs',
-  'Pair progrramming',
-  'Agile development methodologies',
-  'Debugging and troubleshooting',
-  'Performance optimization',
-  'DevOps & Deployment (Azure/AWS)',
-  'Testing and automation (Jest, Cypress, etc.)',
-  'Mobile-first design',
-  'Version control systems (Git)',
-  'PostgreSQL',
-  'NoSQL'
-]
+import Card from './Card'
+import { backend, devops, improve, frontend } from './libs/helpers'
 
 const About = () => {
   return (
@@ -43,7 +21,7 @@ const About = () => {
           </div>
 
           <div className='grow-0 shrink-0 basis-auto w-full lg:w-7/12 md:-ml-5'>
-            <div className='bg-transparant glass h-full rounded-lg p-6 lg:pl-12 text-white flex items-center text-center lg:text-left'>
+            <div className='bg-transparant glass h-full rounded-lg p-6 lg:pl-12 dark:text-stone-300 flex items-center text-center lg:text-left'>
               <div className='lg:pl-12'>
                 <h2 className='text-3xl font-bold mb-6'>Get to know me more</h2>
                 <p className='mb-6 pb-2 lg:pb-0'>
@@ -78,8 +56,14 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className='container rounded-md px-6 mt-6 glass'>
-          <Skills skills={skills} />
+        <div className='container rounded-md p-6 mt-6 soft'>
+          <h1 className=' text-4xl text-center mb-4 font-bold'>Skills</h1>
+          <div className='flex flex-wrap justify-between gap-y-4'>
+            <Card title='Frontend' skills={frontend} />
+            <Card title='Backend' skills={backend} />
+            <Card title='DevOps' skills={devops} />
+            <Card title='Current Learning Ops' skills={improve} />
+          </div>
         </div>
       </section>
     </div>

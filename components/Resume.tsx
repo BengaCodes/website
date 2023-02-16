@@ -42,7 +42,7 @@ function Resume() {
     <div className=' flex justify-center items-center flex-col p-6 gap-4 h-full w-full'>
       <button
         type='button'
-        className='px-8 py-3 m-2 text-lg border rounded dark:border-gray-700 dark:text-gray-900  hover:dark:bg-gray-700 hover:dark:text-white'
+        className='px-8 py-3 m-2 text-lg border rounded dark:bg-neutral-400 dark:text-stone-300 hover:bg-transparent'
         onClick={downloadResume}
       >
         Download Resume
