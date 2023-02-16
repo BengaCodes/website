@@ -1,18 +1,13 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import img from '../assets/beng.jpeg'
+import Card from './Card'
+import { backend, devops, improve, frontend } from './libs/helpers'
 
 const About = () => {
   return (
     <div className='container my-24 px-6 mx-auto'>
       <section className='mb-32'>
-        {/* <style>
-      @media (min-width: 992px) {
-        #cta-img-nml-50 {
-          margin-left: 50px;
-        }
-      }
-    </style> */}
-
         <div className='flex flex-wrap'>
           <div className='grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0'>
             <div className='flex lg:py-12'>
@@ -26,76 +21,48 @@ const About = () => {
           </div>
 
           <div className='grow-0 shrink-0 basis-auto w-full lg:w-7/12 md:-ml-5'>
-            <div className='bg-transparant glass h-full rounded-lg p-6 lg:pl-12 text-white flex items-center text-center lg:text-left'>
+            <div className='bg-transparant glass h-full rounded-lg p-6 lg:pl-12 dark:text-stone-300 flex items-center text-center lg:text-left'>
               <div className='lg:pl-12'>
                 <h2 className='text-3xl font-bold mb-6'>Get to know me more</h2>
                 <p className='mb-6 pb-2 lg:pb-0'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Maxime, sint, repellat vel quo quisquam accusamus in qui at
-                  ipsa enim quibusdam illo laboriosam omnis. Labore itaque illum
-                  distinctio eum neque!
+                  I&apos;m a highly motivated and experienced React frontend
+                  developer with a passion for building dynamic, user-friendly
+                  web applications. With a strong understanding of HTML, CSS,
+                  and JavaScript, I specialize in creating visually appealing
+                  and functional interfaces using the React framework. My
+                  experience to date is mainly between finance and education
+                  industry.
+                  <br /> <br /> I have a good track record of delivering complex
+                  projects on time and to a high standard, and I enjoy the
+                  challenge of finding creative solutions to technical problems.
                 </p>
-
-                <div className='flex flex-col md:flex-row md:justify-around xl:justify-start mb-6 mx-auto'>
-                  <p className='flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0 xl:mr-20'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 512 512'
-                      className='w-4 h-4 mr-2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z'
-                      ></path>
-                    </svg>
-                    JS / TS
-                  </p>
-
-                  <p className='flex items-center mb-4 md:mb-2 lg:mb-0 mx-auto md:mx-0 xl:mr-20'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 512 512'
-                      className='w-4 h-4 mr-2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z'
-                      ></path>
-                    </svg>
-                    React
-                  </p>
-
-                  <p className='flex items-center mb-2 lg:mb-0 mx-auto md:mx-0'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      viewBox='0 0 512 512'
-                      className='w-4 h-4 mr-2'
-                    >
-                      <path
-                        fill='currentColor'
-                        d='M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z'
-                      ></path>
-                    </svg>
-                    Node
-                  </p>
-                </div>
-
                 <p>
-                  Duis sagittis, turpis in ullamcorper venenatis, ligula nibh
-                  porta dui, sit amet rutrum enim massa in ante. Curabitur in
-                  justo at lorem laoreet ultricies. Nunc ligula felis, sagittis
-                  eget nisi vitae, sodales vestibulum purus. Vestibulum nibh
-                  ipsum, rhoncus vel sagittis nec, placerat vel justo. Duis
-                  faucibus sapien eget tortor finibus, a eleifend lectus dictum.
-                  Cras tempor convallis magna id rhoncus. Suspendisse potenti.
-                  Nam mattis faucibus imperdiet. Proin tempor lorem at neque
-                  tempus aliquet. Phasellus at ex volutpat, varius arcu id,
-                  aliquam lectus. Vestibulum mattis felis quis ex pharetra
-                  luctus. Etiam luctus sagittis massa, sed iaculis est vehicula
-                  ut.
+                  When I&apos;m not coding, you&apos;ll find me experimenting
+                  with new technologies, expanding my skills, mainly via{' '}
+                  <Link
+                    href='https://frontendmasters.com'
+                    target='_blank'
+                    className='text-slate-500'
+                  >
+                    Frontend Masters
+                  </Link>{' '}
+                  and staying up-to-date with the latest industry trends, I
+                  currently enjoy working with Next JS and AWS a lot to build
+                  personal projects. I&apos;m committed to delivering the best
+                  possible user experience and I take pride in creating
+                  beautiful, intuitive designs that engage and impress users.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <div className='container rounded-md p-6 mt-6 soft'>
+          <h1 className=' text-4xl text-center mb-4 font-bold'>Skills</h1>
+          <div className='flex flex-wrap justify-between gap-y-4'>
+            <Card title='Frontend' skills={frontend} />
+            <Card title='Backend' skills={backend} />
+            <Card title='DevOps' skills={devops} />
+            <Card title='Current Learning Ops' skills={improve} />
           </div>
         </div>
       </section>
