@@ -100,5 +100,6 @@ export const frontend: string[] = [
   'Knowledge of responsive design and CSS frameworks like Bootstrap, Material UI, etc',
   'Understanding of server-side rendering and Next.js (A Framework I love)',
   'Familiarity with testing frameworks like Jest, Enzyme, etc',
-  'Experience in debugging and troubleshooting frontend issues'
+  'Experience in debugging and troubleshooting frontend issues',
+  'Working with and dislaying large sets of data using tools such as Ag Grid'
 ]
