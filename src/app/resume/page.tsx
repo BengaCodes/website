@@ -2,7 +2,7 @@ import Resume from '../../../components/Resume'
 
 const ResumePage = () => {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <Resume />
     </div>
   )

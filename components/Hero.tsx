@@ -5,16 +5,16 @@ import { greeting } from './libs/helpers'
 
 const Hero = () => {
   return (
-    <section>
-      <div className=''>
+    <section className='h-full'>
+      <div className=' md:h-2/4 lg:h-3/4'>
         <div className='container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-stone-300'>
-          <h1 className='text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-stone-300'>
+          <h1 className='text-2xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-stone-300 md:text-4xl lg:text-6xl'>
             {greeting()} & Welcome
           </h1>
-          <h3 className='text-xl py-2 font-bold leading-none sm:text-3xl xl:max-w-3xl dark:text-stone-300'>
+          <h3 className='text-xl py-2 font-bold leading-none sm:text-3xl xl:max-w-3xl dark:text-stone-300 md:text-3xl md:mt-2'>
             I&apos;m Benga Olasebikan
           </h3>
-          <p className='mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-stone-300'>
+          <p className='mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-stone-300 md:text-xl'>
             A Software Engineer based in London, UK
           </p>
           <div className='flex flex-wrap justify-center'>
@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className='glass p-2'>
+      <div className='glass p-2 md:h-2/4 lg:h-3/4'>
         <Image
           src={img}
           alt='Laptop'
