@@ -39,25 +39,34 @@ function Resume() {
   }
 
   return (
-    <div className=' flex justify-center items-center flex-col p-6 gap-4 h-full w-full'>
+    <div className='flex justify-center items-center flex-col p-6 gap-4 h-full lg:flex lg:flex-col lg:justify-center lg:items-center'>
       <button
         type='button'
-        className='px-8 py-3 m-2 text-lg border rounded dark:bg-neutral-400 dark:text-stone-300 hover:bg-transparent'
+        className='px-4 py-2 m-2 text-lg border rounded dark:bg-neutral-400 dark:text-stone-300 hover:bg-transparent'
         onClick={downloadResume}
       >
         Download Resume
       </button>
-      <Document
-        file='/Benga-Olasebikan-CV.pdf'
-        onLoadSuccess={onDocumentLoadSuccess}
-        className='p-2'
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
-      <PrevNextBtns prev={goToPrevPage} next={goToNextPage} />
+      <div id='ResumeContainer'>
+        <Document
+          file='/Benga-Olasebikan-CV.pdf'
+          onLoadSuccess={onDocumentLoadSuccess}
+          className='PDFDocument'
+        >
+          <Page
+            pageNumber={pageNumber}
+            renderTextLayer={false}
+            renderInteractiveForms={false}
+            className='PDFPage PDFPageOne'
+          />
+        </Document>
+        <div className='lg:flex lg:flex-col lg:justify-center lg:items-center md:flex-col md:justify-center md:items-center'>
+          <p className=' lg:mb-2 text-center mb-4'>
+            Page {pageNumber} of {numPages}
+          </p>
+          <PrevNextBtns prev={goToPrevPage} next={goToNextPage} />
+        </div>
+      </div>
     </div>
   )
 }

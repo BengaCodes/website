@@ -18,7 +18,7 @@ const News = async ({ query }: { query: string }) => {
   const news = await getData(query)
 
   return (
-    <div className='text-l text-center p-2'>
+    <div className='text-l'>
       <Link
         href={news?.articles[0]?.url}
         target='_blank'
