@@ -1,33 +1,35 @@
+import { FileText, Folder, GitHub, Home, Linkedin, User } from 'react-feather'
+
 export const navLinks = [
   {
     name: 'Home',
     link: '/',
-    img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/home.svg'
+    icon: Home
   },
   {
     name: 'About',
     link: '/about',
-    img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/user.svg'
+    icon: User
   },
   {
     name: 'Projects',
     link: '/projects',
-    img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/briefcase.svg'
+    icon: Folder
   },
   {
     name: 'Resume',
     link: '/resume',
-    img: '//cdn.jsdelivr.net/npm/heroicons@1.0.1/outline/newspaper.svg'
+    icon: FileText
   },
   {
     name: 'GitHub',
     link: 'https://github.com/BengaCodes',
-    img: 'https://raw.githubusercontent.com/rdimascio/icons/932c4cf6c9e2031abeca1c164baa0f76785c16fe/icons/github.svg'
+    icon: GitHub
   },
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/benga-olasebikan',
-    img: 'https://raw.githubusercontent.com/rdimascio/icons/932c4cf6c9e2031abeca1c164baa0f76785c16fe/icons/linkedin.svg'
+    icon: Linkedin
   }
 ]
 

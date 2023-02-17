@@ -24,7 +24,10 @@ export default function RootLayout({
       <body className='h-screen w-screen bg-col'>
         <div className='w-full h-full flex flex-col sm:flex-row flex-grow overflow-hidden'>
           <Navbar />
-          <main role='main' className='w-full h-full flex-grow overflow-auto'>
+          <main
+            role='main'
+            className='w-full h-full overflow-x-hidden flex-grow overflow-auto'
+          >
             {children}
           </main>
         </div>
